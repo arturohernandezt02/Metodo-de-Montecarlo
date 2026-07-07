@@ -52,6 +52,8 @@ El proceso es simple en teoría pero sofisticado en la práctica. Comienza ident
 
 - **Facilita la planificación financiera y de proyectos:** La simulación de Monte Carlo es ampliamente utilizada en la planificación financiera y de proyectos. Permite modelar diferentes escenarios económicos, evaluar la viabilidad financiera de inversiones y estimar la duración y el costo de proyectos complejos.
 
+**Las simulaciones Monte Carlo también se emplean para predicciones a largo plazo debido a su precisión.** A medida que aumenta la cantidad de entradas, también crece la cantidad de pronósticos, lo que le permite proyectar resultados más adelante en el tiempo con mayor precisión. Cuando se completa una simulación de Monte Carlo, se obtiene un rango de resultados posibles con la probabilidad de que ocurra cada resultado.
+
 ## Ventajas y desventajas de la simulación de Monte Carlo
 La simulación de Monte Carlo es una herramienta poderosa utilizada en una variedad de campos para abordar la incertidumbre y tomar decisiones informadas. Sin embargo, como cualquier técnica, tiene sus ventajas y desventajas. A continuación, se presenta una tabla que destaca tanto los beneficios como las limitaciones de esta metodología.
 
@@ -62,3 +64,21 @@ La simulación de Monte Carlo es una herramienta poderosa utilizada en una varie
 | Proporciona estimaciones de probabilidades para diferentes resultados, facilitando la evaluación del riesgo. | La precisión de los resultados depende en gran medida de la precisión de las distribuciones de probabilidad y los modelos utilizados. |
 | Es altamente flexible y adaptable a una variedad de problemas en diferentes campos. | La interpretación de los resultados puede ser compleja y requiere experiencia para una aplicación efectiva. |
 | Permite realizar análisis de sensibilidad y validación de resultados para mejorar la confiabilidad de las conclusiones. | La sobrestimación o subestimación de la incertidumbre puede llevar a decisiones erróneas.|
+
+## ¿Cómo se aplica la simulación de Monte Carlo?
+El método de Monte Carlo se aplica siguiendo estos pasos generales:
+
+- **Identificación de variables y parámetros relevantes:** Primero, se identifican todas las variables y parámetros relevantes que afectan el resultado de interés. Estos pueden incluir variables financieras, de mercado, de rendimiento de productos, tasas de interés, entre otros, dependiendo del contexto de la aplicación.
+- **Asignación de distribuciones de probabilidad:** Una vez identificadas las variables, se asignan distribuciones de probabilidad que representen la incertidumbre asociada con cada una. Esto puede implicar distribuciones normales, uniformes, exponenciales u otras, dependiendo de la naturaleza de la variable y los datos disponibles.
+- **Generación de múltiples escenarios aleatorios:** Se generan múltiples escenarios aleatorios utilizando valores aleatorios tomados de las distribuciones de probabilidad asignadas a cada variable. La cantidad de escenarios generados puede variar según la complejidad del problema y el nivel de precisión deseado.
+- **Ejecución de modelos o simulaciones:** En esta etapa, se ejecuta el modelo o la simulación utilizando los valores aleatorios generados en el paso anterior. Esto implica calcular el resultado de interés para cada escenario aleatorio.
+- **Análisis de resultados:** Una vez completada la ejecución de las simulaciones, se analizan los resultados para obtener información útil. Esto puede incluir la identificación de tendencias, la evaluación de riesgos, la estimación de probabilidades de diferentes resultados y la toma de decisiones informadas basadas en estos análisis.
+- **Validación y sensibilidad:** Es importante validar los resultados obtenidos y realizar análisis de sensibilidad para comprender cómo cambian los resultados en función de cambios en los parámetros del modelo o las distribuciones de probabilidad asignadas.
+- **Corrección y mejoras:** La aplicación del método de Monte Carlo a menudo implica un proceso de mejora, donde se realizan ajustes en el modelo, las distribuciones de probabilidad o los escenarios generados para mejorar la precisión y la utilidad de los resultados.
+
+---
+### Fuentes de información ###
+- https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo
+- https://www.ibm.com/mx-es/think/topics/monte-carlo-simulation
+- https://support.minitab.com/es-mx/workspace/help-and-how-to/monte-carlo-simulation/what-is-monte-carlo-simulation/
+- https://www.questionpro.com/blog/es/simulacion-de-monte-carlo/
