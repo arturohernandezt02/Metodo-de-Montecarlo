@@ -26,7 +26,9 @@ Actualmente, el método de Montecarlo se utiliza en una gran variedad de áreas,
 * Estadística computacional.
 * Computación gráfica, especialmente en algoritmos de *ray tracing* para generar imágenes tridimensionales con iluminación realista.
 
+<p align=center>
 <img width="500" height="707" alt="image" src="https://github.com/user-attachments/assets/094830ae-8b31-4f06-a1dd-8c6d981c2a9a" />
+</p>
 
 ## ¿Cómo funciona la simulación de Montecarlo?
 
@@ -38,3 +40,25 @@ Este proceso se repite miles o incluso millones de veces. En cada iteración cam
 
 Gracias a este enfoque, el método no solo permite estimar cuál es el resultado más probable, sino también conocer la probabilidad de que ocurran distintos escenarios y evaluar el nivel de incertidumbre asociado al problema.
 
+El proceso es simple en teoría pero sofisticado en la práctica. Comienza identificando todas las variables que influyen en el resultado de una decisión o un proyecto. Luego, se asignan distribuciones de probabilidad a estas variables para representar su incertidumbre. A continuación, se realizan miles o incluso millones de simulaciones, utilizando valores aleatorios dentro de estas distribuciones de probabilidad. Finalmente, se analizan los resultados para determinar la probabilidad de diversos resultados y evaluar los riesgos asociados.
+
+## ¿Por qué es importante la simulación de Monte Carlo?
+
+- **Mejora la precisión de las predicciones:** En entornos complejos, las predicciones basadas en suposiciones simples pueden ser inexactas. La simulación de Monte Carlo tiene en cuenta la variabilidad y la incertidumbre, lo que permite obtener predicciones más precisas y realistas.
+
+- **Evalúa y mitiga riesgos:** Al simular una amplia gama de posibles resultados, la simulación de Monte Carlo identifica y cuantifica los riesgos asociados con una decisión o proyecto. Esto permite a los tomadores de decisiones anticipar problemas potenciales y desarrollar estrategias de mitigación de riesgos adecuadas.
+
+- **Optimiza la toma de decisiones:** Al proporcionar una comprensión más completa de las posibles ramificaciones de una decisión, la simulación de Monte Carlo ayuda a los líderes empresariales a tomar decisiones más informadas y estratégicas. Permite evaluar diferentes opciones y seleccionar la que maximice el valor o minimice el riesgo.
+
+- **Facilita la planificación financiera y de proyectos:** La simulación de Monte Carlo es ampliamente utilizada en la planificación financiera y de proyectos. Permite modelar diferentes escenarios económicos, evaluar la viabilidad financiera de inversiones y estimar la duración y el costo de proyectos complejos.
+
+## Ventajas y desventajas de la simulación de Monte Carlo
+La simulación de Monte Carlo es una herramienta poderosa utilizada en una variedad de campos para abordar la incertidumbre y tomar decisiones informadas. Sin embargo, como cualquier técnica, tiene sus ventajas y desventajas. A continuación, se presenta una tabla que destaca tanto los beneficios como las limitaciones de esta metodología.
+
+| Ventajas | Desventajas |
+| :--- | :--- |
+| Permite modelar sistemas complejos con múltiples variables. | Requiere un conocimiento sólido de estadísticas y probabilidad para su implementación adecuada. |
+| Maneja eficazmente la incertidumbre al generar múltiples escenarios aleatorios. | Puede ser computacionalmente intensivo, especialmente para problemas con muchas variables o simulaciones. |
+| Proporciona estimaciones de probabilidades para diferentes resultados, facilitando la evaluación del riesgo. | La precisión de los resultados depende en gran medida de la precisión de las distribuciones de probabilidad y los modelos utilizados. |
+| Es altamente flexible y adaptable a una variedad de problemas en diferentes campos. | La interpretación de los resultados puede ser compleja y requiere experiencia para una aplicación efectiva. |
+| Permite realizar análisis de sensibilidad y validación de resultados para mejorar la confiabilidad de las conclusiones. | La sobrestimación o subestimación de la incertidumbre puede llevar a decisiones erróneas.|
