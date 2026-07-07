@@ -14,6 +14,8 @@ El método de Montecarlo fue desarrollado durante la década de 1940 por John vo
 
 Su desarrollo estuvo estrechamente relacionado con el Proyecto Manhattan, donde los investigadores necesitaban estudiar fenómenos extremadamente complejos, como el comportamiento de los neutrones dentro de materiales de fisión. Debido a que estos procesos tienen un comportamiento probabilístico, las simulaciones aleatorias resultaron ser una herramienta muy eficaz para analizarlos.
 
+Una anécdota curiosa, es que Stanisław Ulam tuvo la idea del método mientras analizaba las probabilidades de éxito en un juego de solitario. Al darse cuenta de que calcularlas de forma exacta era muy complicado, pensó que sería más sencillo simular miles de partidas y observar la frecuencia con la que se ganaban. Esa idea dio origen a lo que hoy conocemos como simulación de Montecarlo.
+
 Aunque los fundamentos del método surgieron alrededor de 1944, su uso se expandió rápidamente gracias al desarrollo de las computadoras, que permitieron ejecutar millones de simulaciones en tiempos cada vez menores.
 
 Actualmente, el método de Montecarlo se utiliza en una gran variedad de áreas, entre ellas:
@@ -32,15 +34,48 @@ Actualmente, el método de Montecarlo se utiliza en una gran variedad de áreas,
 
 ## ¿Cómo funciona la simulación de Montecarlo?
 
-A diferencia de un modelo tradicional, que utiliza un único valor para cada variable de entrada, una simulación de Montecarlo considera que algunas variables pueden tomar diferentes valores dentro de un rango de posibilidades.
+A diferencia de un modelo tradicional, que utiliza un único valor para cada variable de entrada, una simulación de Montecarlo asume que algunas variables **no tienen un valor fijo**, sino que pueden tomar distintos valores de acuerdo con una **distribución de probabilidad**. Esto permite representar la incertidumbre presente en problemas del mundo real, donde no siempre es posible conocer con exactitud el valor que tendrá una variable.
 
-Para representar esa incertidumbre, a cada variable se le asigna una distribución de probabilidad, como una distribución uniforme o una distribución normal. Posteriormente, el algoritmo genera valores aleatorios siguiendo dicha distribución y calcula el resultado del modelo.
+Para representar esa incertidumbre, a cada variable se le asigna una distribución de probabilidad, como una **distribución uniforme** o una **distribución normal**. Posteriormente, el algoritmo genera un conjunto de valores aleatorios respetando dichas distribuciones y utiliza esos valores como entrada para ejecutar el modelo.
 
-Este proceso se repite miles o incluso millones de veces. En cada iteración cambian los valores de entrada, lo que produce un nuevo resultado. Al finalizar todas las simulaciones, se obtiene una distribución de resultados posibles en lugar de un único valor.
+Cada vez que el algoritmo ejecuta el modelo utilizando un nuevo conjunto de valores aleatorios se realiza una iteración. En cada iteración se obtiene un resultado diferente, ya que cambian los valores de entrada. Este proceso se repite miles o incluso millones de veces para generar una gran cantidad de escenarios posibles.
 
-Gracias a este enfoque, el método no solo permite estimar cuál es el resultado más probable, sino también conocer la probabilidad de que ocurran distintos escenarios y evaluar el nivel de incertidumbre asociado al problema.
+En términos generales, el funcionamiento del método puede resumirse en los siguientes pasos:
 
-El proceso es simple en teoría pero sofisticado en la práctica. Comienza identificando todas las variables que influyen en el resultado de una decisión o un proyecto. Luego, se asignan distribuciones de probabilidad a estas variables para representar su incertidumbre. A continuación, se realizan miles o incluso millones de simulaciones, utilizando valores aleatorios dentro de estas distribuciones de probabilidad. Finalmente, se analizan los resultados para determinar la probabilidad de diversos resultados y evaluar los riesgos asociados.
+1. Identificar las variables que presentan incertidumbre.
+2. Asignar una distribución de probabilidad a cada una de ellas.
+3. Generar valores aleatorios siguiendo las distribuciones definidas.
+4. Ejecutar el modelo utilizando esos valores como entrada.
+5. Repetir el proceso miles o millones de veces.
+6. Analizar el conjunto de resultados obtenidos para estimar probabilidades, riesgos y tendencias.
+
+Desde un punto de vista matemático, el método de Montecarlo aproxima el valor esperado de una función a partir del promedio de un gran número de simulaciones independientes:
+
+$$
+\hat{\mu} = \frac{1}{N}\sum_{i=1}^{N}f(x_i)
+$$
+
+donde:
+
+- **$N$** es el número total de simulaciones realizadas.
+- **$x_i$** representa la muestra aleatoria generada en la iteración $i$.
+- **$f(x_i)$** es el resultado obtenido al ejecutar el modelo con dicha muestra.
+- **$\hat{\mu}$** es la estimación del valor esperado.
+
+En términos sencillos, esta expresión indica que el resultado final se obtiene promediando los resultados de un gran número de simulaciones independientes.
+
+A medida que aumenta el número de simulaciones, la estimación suele acercarse al valor real del problema. En otras palabras, un mayor número de iteraciones generalmente produce resultados más estables y confiables.
+
+Es importante destacar que el método de Montecarlo no busca encontrar una única respuesta exacta. En su lugar, estima un conjunto de resultados posibles junto con la probabilidad de que cada uno ocurra. Esta característica lo convierte en una herramienta especialmente útil para analizar problemas donde intervienen el azar, el riesgo o la incertidumbre.
+
+```mermaid
+flowchart LR
+    A[Definir variables] --> B[Asignar distribuciones]
+    B --> C[Generar valores aleatorios]
+    C --> D[Ejecutar el modelo]
+    D --> E[Repetir miles de veces]
+    E --> F[Analizar los resultados]
+```
 
 ## ¿Por qué es importante la simulación de Monte Carlo?
 
@@ -76,7 +111,9 @@ El método de Monte Carlo se aplica siguiendo estos pasos generales:
 - **Validación y sensibilidad:** Es importante validar los resultados obtenidos y realizar análisis de sensibilidad para comprender cómo cambian los resultados en función de cambios en los parámetros del modelo o las distribuciones de probabilidad asignadas.
 - **Corrección y mejoras:** La aplicación del método de Monte Carlo a menudo implica un proceso de mejora, donde se realizan ajustes en el modelo, las distribuciones de probabilidad o los escenarios generados para mejorar la precisión y la utilidad de los resultados.
 
----
+## Conclusión
+El método de Montecarlo es una de las herramientas más importantes de la simulación computacional. Su capacidad para modelar incertidumbre mediante números aleatorios permite resolver problemas donde una solución exacta resulta impráctica o demasiado costosa. Gracias al poder de cómputo actual, se ha convertido en una técnica fundamental en disciplinas que van desde las finanzas y la ingeniería hasta la inteligencia artificial y la computación gráfica.
+
 ### Fuentes de información ###
 - https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo
 - https://www.ibm.com/mx-es/think/topics/monte-carlo-simulation
