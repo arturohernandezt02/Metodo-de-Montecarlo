@@ -98,17 +98,18 @@ flowchart LR
 Es importante destacar que este flujo representa el funcionamiento general del método. En aplicaciones reales, algunas etapas pueden repetirse varias veces para ajustar el modelo, mejorar las distribuciones de probabilidad o incorporar nueva información antes de obtener una estimación satisfactoria.
 
 
-## ¿Por qué es importante la simulación de Monte Carlo?
+## ¿Por qué es importante la simulación de Montecarlo?
 
-- **Mejora la precisión de las predicciones:** En entornos complejos, las predicciones basadas en suposiciones simples pueden ser inexactas. La simulación de Monte Carlo tiene en cuenta la variabilidad y la incertidumbre, lo que permite obtener predicciones más precisas y realistas.
+La principal fortaleza del método de Montecarlo es que permite estudiar problemas donde existe **incertidumbre**. En lugar de ofrecer un único resultado, proporciona un conjunto de escenarios posibles junto con la probabilidad de que cada uno ocurra, lo que facilita comprender mejor el comportamiento de un sistema y tomar decisiones más informadas.
 
-- **Evalúa y mitiga riesgos:** Al simular una amplia gama de posibles resultados, la simulación de Monte Carlo identifica y cuantifica los riesgos asociados con una decisión o proyecto. Esto permite a los tomadores de decisiones anticipar problemas potenciales y desarrollar estrategias de mitigación de riesgos adecuadas.
+Entre sus principales ventajas destacan:
 
-- **Optimiza la toma de decisiones:** Al proporcionar una comprensión más completa de las posibles ramificaciones de una decisión, la simulación de Monte Carlo ayuda a los líderes empresariales a tomar decisiones más informadas y estratégicas. Permite evaluar diferentes opciones y seleccionar la que maximice el valor o minimice el riesgo.
+* **Predicciones más realistas.** Considera la variabilidad de las variables de entrada en lugar de asumir valores fijos.
+* **Análisis de riesgos.** Permite estimar la probabilidad de distintos escenarios, incluidos los más favorables y los más desfavorables.
+* **Mejor apoyo para la toma de decisiones.** Facilita comparar alternativas considerando la incertidumbre asociada a cada una.
+* **Gran versatilidad.** Puede aplicarse en disciplinas tan diversas como las finanzas, la ingeniería, la física, la inteligencia artificial, la logística o la medicina.
 
-- **Facilita la planificación financiera y de proyectos:** La simulación de Monte Carlo es ampliamente utilizada en la planificación financiera y de proyectos. Permite modelar diferentes escenarios económicos, evaluar la viabilidad financiera de inversiones y estimar la duración y el costo de proyectos complejos.
-
-**Las simulaciones Monte Carlo también se emplean para predicciones a largo plazo debido a su precisión.** A medida que aumenta la cantidad de entradas, también crece la cantidad de pronósticos, lo que le permite proyectar resultados más adelante en el tiempo con mayor precisión. Cuando se completa una simulación de Monte Carlo, se obtiene un rango de resultados posibles con la probabilidad de que ocurra cada resultado.
+Gracias a estas características, el método de Montecarlo se ha convertido en una de las herramientas de simulación más utilizadas para analizar sistemas complejos y apoyar la toma de decisiones basada en datos.
 
 ## Ventajas y desventajas de la simulación de Monte Carlo
 La simulación de Monte Carlo es una herramienta poderosa utilizada en una variedad de campos para abordar la incertidumbre y tomar decisiones informadas. Sin embargo, como cualquier técnica, tiene sus ventajas y desventajas. A continuación, se presenta una tabla que destaca tanto los beneficios como las limitaciones de esta metodología.
