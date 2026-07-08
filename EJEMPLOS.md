@@ -1,29 +1,85 @@
-# Ejemplos del Método Montecarlo #
+# Ejemplos del método de Montecarlo
 
-## Cálculo de π ##
+## Ejemplo 1: Estimación del número $\pi$
 
-Uno de los métodos más enseñados para ejemplificar el Método de Montecarlo, es el del cálculo del número pi.
+Uno de los ejemplos más conocidos para comprender el funcionamiento del método de Montecarlo consiste en **estimar el valor del número $\pi$** utilizando puntos generados aleatoriamente.
 
-Este método está cerca del experimento de aguja de Buffon, planteada por el naturalista francés Georges-Louis Leclerc de Buffon.
+La idea está relacionada con el **experimento de la aguja de Buffon**, propuesto por el matemático francés **Georges-Louis Leclerc de Buffon**, quien demostró que era posible aproximar el valor de $\pi$ mediante experimentos probabilísticos.
 
-Consideremos al círculo unitario inscrito en el cuadrado de lado 2 centrado en el origen. Dado que el cociente de sus áreas es 
-π{\displaystyle \pi }4, el valor de π{\displaystyle \pi } puede aproximarse usando Montecarlo de acuerdo al siguiente método:
+### Fundamento matemático
 
-1. Dibuja un círculo unitario, y al cuadrado de lado 2 que lo inscribe.
-2. Lanza un número n{\displaystyle n} de puntos aleatorios uniformes dentro del cuadrado.
-3. Cuenta el número de puntos dentro del círculo, i.e. puntos cuya distancia al origen es menor que 1.
-4. El cociente de los puntos dentro del círculo dividido entre n{\displaystyle n} es un estimado de, π{\displaystyle \pi }4. Multiplica el resultado por 4 para estimar π{\displaystyle \pi }.
+Consideremos un **círculo unitario** (radio igual a 1) inscrito dentro de un cuadrado de lado 2, ambos centrados en el origen.
 
-<p align=center>
-<img width="330" height="330" alt="Estimacion_de_Pi_por_Montercarlo" src="https://github.com/user-attachments/assets/4d3be2fb-dc73-4809-b9a2-30aff5eabf6c" />
+<p align="center">
+<img width="330" height="330" alt="Estimación de Pi mediante Montecarlo" src="https://github.com/user-attachments/assets/4d3be2fb-dc73-4809-b9a2-30aff5eabf6c" />
 </p>
 
-En este cálculo se tienen que hacer dos consideraciones importantes:
+El área del círculo es
 
-1. Si los puntos no están uniformemente distribuidos, el método es inválido.
-2. La aproximación será pobre si solo se lanzan unos pocos puntos. En promedio, la aproximación mejora conforme se aumenta el número de puntos.
+$$
+A_{círculo}=\pi r^2=\pi
+$$
 
-Ejemplo realizado en java:
+ya que $r=1$.
+
+Por otro lado, el área del cuadrado es
+
+$$
+A_{cuadrado}=2^2=4.
+$$
+
+Por lo tanto, la relación entre ambas áreas es
+
+$$
+\frac{A_{\text{círculo}}}{A_{\text{cuadrado}}} =
+\frac{\pi}{4}
+$$
+
+Si los puntos se distribuyen **uniformemente** dentro del cuadrado, la proporción de puntos que caen dentro del círculo será aproximadamente igual a esa relación de áreas. Es decir,
+
+$$
+\frac{\text{Puntos dentro del círculo}}
+{\text{Total de puntos}}
+\approx
+\frac{\pi}{4}.
+$$
+
+Despejando $\pi$, obtenemos la expresión utilizada en la simulación:
+
+$$
+\pi \approx
+4
+\cdot
+\frac{\text{Puntos dentro del círculo}}
+{\text{Total de puntos}}.
+$$
+
+### Algoritmo
+
+El procedimiento puede resumirse en los siguientes pasos:
+
+1. Dibujar un círculo unitario inscrito en un cuadrado de lado 2.
+2. Generar **$N$ puntos aleatorios** distribuidos uniformemente dentro del cuadrado.
+3. Verificar cuáles de esos puntos caen dentro del círculo, es decir, aquellos que cumplen:
+
+$$
+x^2+y^2\le1.
+$$
+
+4. Contar la cantidad de puntos que quedaron dentro del círculo.
+5. Aplicar la expresión anterior para obtener una aproximación de $\pi$.
+
+### Consideraciones
+
+Para que el método produzca una buena aproximación deben cumplirse dos condiciones importantes:
+
+* Los puntos deben generarse con una **distribución uniforme**; de lo contrario, la estimación será incorrecta.
+* Mientras mayor sea el número de puntos generados, mejor será la aproximación obtenida. Esto se debe a que el error disminuye conforme aumenta el número de simulaciones.
+
+### Implementación en Java
+
+El siguiente programa implementa este procedimiento utilizando números aleatorios para estimar el valor de $\pi$.
+
 ```
 import java.awt.geom.Point2D;
    import java.util.Random;
