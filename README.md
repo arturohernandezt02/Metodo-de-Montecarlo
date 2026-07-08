@@ -2,7 +2,7 @@
 
 ## 📌 ¿Qué es este repositorio?
 
-Este repositorio es una **investigación completa y accesible sobre el Método de Montecarlo**, una de las técnicas de simulación más importantes en la ciencia, la ingeniería y las matemáticas. Aquí encontrarás explicaciones detalladas, contexto histórico y ejemplos prácticos que te ayudarán a entender cómo funciona esta poderosa herramienta.
+Este repositorio es una **investigación completa y accesible sobre el Método de Montecarlo**, una de las técnicas de simulación más importantes en la ciencia, la ingeniería y las matemáticas.
 
 ## 📚 Contenido
 
@@ -16,13 +16,19 @@ Un documento exhaustivo que cubre:
 - **Ventajas y desventajas** - Análisis comparativo de fortalezas y limitaciones del método
 - **Fundamento matemático** - Fórmulas y conceptos detrás de la técnica
 
-### 2. **EJEMPLOS.md**
+### 2. **Ejemplos prácticos**
 Ejemplos prácticos e implementables:
 
-- **Cálculo de π (Pi)** - El ejemplo clásico que ilustra el método de Montecarlo
+- **[EJEMPLO 1.md](EJEMPLO%201.md)** - Estimación del número π (Pi)
+  - El ejemplo clásico que ilustra el método de Montecarlo
   - Explicación visual del problema: círculo inscrito en un cuadrado
   - Algoritmo paso a paso
   - Código implementado en Java que puedes ejecutar y modificar
+
+- **[EJEMPLO 2.md](EJEMPLO%202.md)** - Estimación de la duración de un proyecto
+  - Aplicación del método a la gestión de proyectos
+  - Cómo estimar tiempos totales cuando existe incertidumbre
+  - Modelos de simulación para análisis de riesgos
 
 ## 🎯 ¿Para quién es este repositorio?
 
@@ -51,7 +57,7 @@ El Método de Montecarlo es fundamental en la era digital porque:
 
 1. **Comienza** leyendo este README para entender de qué se trata todo
 2. **Explora** `Montecarlo-explicacion.md` para comprender profundamente el método
-3. **Aprende con la práctica** revisando el código en `EJEMPLOS.md`
+3. **Aprende con la práctica** revisando los ejemplos en `EJEMPLO 1.md` y `EJEMPLO 2.md`
 4. **Experimenta** - Modifica el código Java y ve cómo cambian los resultados
 
 ## 🔗 Fuentes de información
@@ -64,4 +70,4 @@ Las explicaciones en este repositorio se basan en:
 
 ---
 
-**Nota:** Este es un repositorio educativo diseñado para aprender. Todos los conceptos se explican de manera progresiva, desde lo básico hasta ideas más complejas, de modo que sea accesible para estudiantes sin conocimientos previos en simulaciones.
+**Nota:** Este es un repositorio educativo diseñado para aprender. Todos los conceptos se explican de manera progresiva, desde lo básico hasta ideas más complejas, de modo que sea accesible para estudiantes de cualquier nivel.
